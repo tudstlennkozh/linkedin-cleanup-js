@@ -15,6 +15,9 @@
 
     // Array of selectors for different LinkedIn post templates
     const selectors = [
+        'div[data-view-name="feed-full-update"]',
+        'div.occludable-update',
+        'div.feed-shared-update-v2',
         'div[data-id^="urn:li:activity:"]',
         'article[data-activity-urn^="urn:li:activity:"]'
     ];
