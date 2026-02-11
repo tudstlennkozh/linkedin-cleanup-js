@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clean Up Linkedin Posts
 // @namespace    https://thevgergroup.com/
-// @version      1.2
+// @version      1.3
 // @description  Remove posts containing "Suggested" or "Promoted" from the feed
 // @author       Patrick O'Leary
 // @match        https://www.linkedin.com/*
@@ -15,6 +15,7 @@
 
     // Array of selectors for different LinkedIn post templates
     const selectors = [
+        'div[role="listitem"]',
         'div[data-view-name="feed-full-update"]',
         'div.occludable-update',
         'div.feed-shared-update-v2',
