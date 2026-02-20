@@ -1,6 +1,6 @@
 # LinkedIn Feed Cleanup Script
 
-This script removes "Suggested" posts from your LinkedIn feed to provide a cleaner browsing experience.
+This script removes "Suggested" posts and "LinkedIn News" from your LinkedIn feed to provide a cleaner browsing experience.
 
 If the suggested posts were any good, we won't need this. 
 And sometimes we just need to take back the websites we use.
