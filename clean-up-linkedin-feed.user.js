@@ -17,6 +17,7 @@
     const selectors = [
         'div[role="listitem"]',
         'div[data-view-name="feed-full-update"]',
+      	'div[data-view-name="news-module"]',
         'div.occludable-update',
         'div.feed-shared-update-v2',
         'div[data-id^="urn:li:activity:"]',
@@ -44,6 +45,16 @@
         pt: 'Patrocinado',
         // etc...
     };
+  
+  	// Object to remove LinkedIn Actualités ???
+  	const linkedInNews = {
+  			en: 'LinkedIn News',
+      	es: 'LinkedIn Noticias',
+      	fr: 'LinkedIn Actualités',
+      	de: 'LinkedIn Nachrichten',
+      	it: 'LinkedIn Notizie',
+      	pt: 'LinkedIn Notícias',
+  	};
 
     // Function to determine the user's language or fallback to English
     function getUserLanguage() {
@@ -56,6 +67,7 @@
     const userLanguage = getUserLanguage();
     const suggestedText = suggestedTranslations[userLanguage];
     const promotedText = promotedTranslations[userLanguage];
+  	const newsFeed = linkedInNews[userLanguage];
 
     // Function to hide posts
     function hideBlockedPosts() {
@@ -70,7 +82,7 @@
                 for (let el of textElements) {
                     // Trim and compare
                     const text = el.textContent.trim();
-                    if (text.includes(suggestedText) || text.includes(promotedText)) {
+                    if (text.includes(suggestedText) || text.includes(promotedText) || text.includes(newsFeed) ) {
                         feedItem.style.display = 'none';
                         break; // no need to check the rest
                     }
